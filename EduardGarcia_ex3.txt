@@ -1,0 +1,26 @@
+/*3. Programar un algoritmo recursivo que permita sumar los  elementos de un vector:*/
+public class GarciaEduard_exercici3 {
+    /**
+     * @author GarciaEduard
+     * @param vector
+     * @param num
+     * @return
+     */
+    public static int suma(int[] vector, int num) {
+        if (num == vector.length - 1) {
+            return vector[num];
+        }
+        return vector[num] + suma(vector, num + 1);
+    }
+
+    /**
+     * @author GarciaEduard
+     * @param args
+     */
+    public static void main(String[] args) {
+        int[] vector = {1, 2, 3, 4, 5};
+        int resp = suma(vector, 0);
+        System.out.println(resp);
+    }
+
+}
