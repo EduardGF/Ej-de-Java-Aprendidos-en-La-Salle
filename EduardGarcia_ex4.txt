@@ -1,0 +1,26 @@
+/*4. Programar un algoritmo recursivo que permita multiplicar los  elementos de un vector:*/
+public class GarciaEduard_exercici4 {
+    /**
+     * @author GarciaEduard
+     * @param vector
+     * @param num
+     * @return
+     */
+    public static int x(int[] vector, int num) {
+        if (num == vector.length - 1) {
+            return vector[num];
+        }
+        return vector[num] * x(vector, num+ 1);
+    }
+
+    /**
+     * @author GarciaEduard
+     * @param args
+     */
+    public static void main(String[] args) {
+        int[] vector = {1, 2, 3, 4, 5};
+        int resp = x(vector, 0);
+        System.out.println(resp);
+    }
+
+}
